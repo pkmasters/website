@@ -1,60 +1,61 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* Header and Navigation */
 header {
-    background: #28a745; /* Changed to green */
-    color: #fff;
-    padding: 1em 0;
+  background: #28a745;
+  /* Changed to green */
+  color: #fff;
+  padding: 1em 0;
 }
 
 .navbar {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+  list-style: none;
+  padding: 0;
+  text-align: center;
 }
 
 .navbar li {
-    display: inline;
-    margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
 
 .navbar a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Main Sections */
 .section {
-    padding: 2em;
-    text-align: center;
+  padding: 2em;
+  text-align: center;
 }
 
 #home {
-    background: #f4f4f4;
+  background: #f4f4f4;
 }
 
 #about {
-    background: #ddd;
+  background: #ddd;
 }
 
 /* Footer */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
