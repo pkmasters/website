@@ -10,7 +10,6 @@ body {
 /* Header and Navigation */
 header {
   background: #28a745;
-  /* Changed to green */
   color: #fff;
   padding: 1em 0;
 }
@@ -35,18 +34,56 @@ header {
   text-decoration: underline;
 }
 
-/* Main Sections */
+/* Section Styles */
 .section {
   padding: 2em;
-  text-align: center;
 }
 
-#home {
+/* Center Titles */
+.section h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* Centered Text Section */
+.centered-text {
+  text-align: center;
   background: #f4f4f4;
 }
 
-#about {
-  background: #ddd;
+/* Left-Aligned Text Section */
+.left-aligned {
+  text-align: left;
+  background: #e9ecef;
+}
+
+.left-aligned ul {
+  padding-left: 20px;
+}
+
+.left-aligned ul li {
+  margin-bottom: 0.5em;
+}
+
+/* Green Buttons */
+.buttons {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #218838;
 }
 
 /* Footer */
