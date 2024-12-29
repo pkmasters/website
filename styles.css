@@ -76,7 +76,9 @@ header {
 }
 
 .img {
-  width: 600px;
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
 }
 
 /* Green Buttons */
