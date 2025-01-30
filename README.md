@@ -17,3 +17,11 @@ I used **GitHub Pages** to host my site. It's super easy and free, plus it works
 ### Some Details:
 - I’ve got my HTML files in the main repo, and you can find them right there in the root folder.
 - Cloudflare takes care of the domain, and GitHub handles the hosting. All you need to do is make sure DNS is set up properly, and GitHub knows about your custom domain (you can do that in the settings).
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+Thank you for checking out my Ansible playbooks! Happy automating!
