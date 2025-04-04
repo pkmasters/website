@@ -110,3 +110,75 @@ footer {
 
   margin-top: auto;
 }
+
+/* Container Styling */
+#zammad-feedback-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Form elements */
+#zammad-feedback-form input,
+#zammad-feedback-form select,
+#zammad-feedback-form textarea {
+  max-width: 100%;
+  width: 100%;
+  padding: 12px;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  resize: vertical;
+  max-height: 300px;
+  min-height: 40px;
+}
+
+/* Label styling (if present) */
+#zammad-feedback-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Submit Button */
+#zammad-feedback-form button,
+#zammad-feedback-form input[type="submit"] {
+  background-color: #4CAF50; /* or your brand color */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: auto;
+  display: block;
+}
+
+#zammad-feedback-form button:hover,
+#zammad-feedback-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Thank You message styling */
+#zammad-feedback-form .zammad-form-thank-you {
+  background-color: #e6ffe6;
+  padding: 1rem;
+  border-left: 4px solid #4CAF50;
+  margin-top: 1rem;
+  border-radius: 6px;
+  color: #333;
+}
+
+.zammad-form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
