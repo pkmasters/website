@@ -32,14 +32,14 @@
       <p>I am using a Cloudflare domain from their registrar, which is a paid service per year. My website is hosted on GitHub Pages, where I created a pages repository and linked my domain to it. Additionally, I created a DNS record on Cloudflare to point to the GitHub Pages IP address. The website is built using simple HTML and CSS files.</p>
       
       <!-- New Section for Twingate VPN -->
-      <h4>Accessing Services with Twingate VPN</h4>
+      <h3>Accessing Services with Twingate VPN</h3>
       <p>To access all of my services over the internet securely, I use <a href="https://www.twingate.com/docs" target="_blank">Twingate VPN</a>. This allows me to access local resources without exposing any ports.</p>
 
       <!-- Cloudflare Zero Trust Tunneling -->
-      <h4>Services For Public Access</h4>
+      <h3>Services For Public Access</h3>
       <p>For services that I host that integrate with the Internet, it all exposed using <a href="https://www.cloudflare.com/products/access/" target="_blank">Cloudflare ZTNA</a>.</p>
-      <p>With Zero Trust, I can "safely" expose my public services via a Cloudflare Tunnel. That way there is no exposed ports on my WAN IP, and users can access those services freely. For the most part, Cloudflare has been reliable, and downtime is very minimal and is usally on my side of infra.</p>
-      <p>For added security, I implemented global WAF rules that are applicable across all of my publicly accessible web services. There are only 5 WAF rules and 1 custom rule set (zone) in the Free Tier. These are more than enough to secure my self hosted services</p>
+      <p>With Zero Trust, I can "safely" expose my public services via a Cloudflare Tunnel. That way there is no exposed ports on my WAN IP, and users can access those services freely. For the most part, Cloudflare has been reliable, and downtime is very minimal and is usally on my side of infrastructure.</p>
+      <p>For added security, I implemented global WAF rules that are applicable across all of my publicly accessible web services. There are only 5 WAF rules and 1 custom rule set (zone) in the Free Tier. These are more than enough to secure my self hosted services.</p>
       <p>This actually fixed an issue for me, which was geo blocking. My router doesn't have that function, and since I am not exposing my reverse proxy to the Internet, the WAF rules really helped in geo blocking requests that did not match the rule.</p>
 
       <!-- Section for Hosting Services -->
