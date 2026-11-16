@@ -31,33 +31,35 @@
       <h3>Website Setup</h3>
       <p>I am using a Cloudflare domain from their registrar, which is a paid service per year. My website is hosted on GitHub Pages, where I created a pages repository and linked my domain to it. Additionally, I created a DNS record on Cloudflare to point to the GitHub Pages IP address. The website is built using simple HTML and CSS files.</p>
       
-      <!-- New Section for Cloudflare Zero Trust Tunneling -->
-      <h4>Accessing Services with Cloudflare Zero Trust Tunneling</h4>
-      <p>To access all of my services over the internet securely, I use <a href="https://www.cloudflare.com/sase/" target="_blank">Cloudflare's Zero Trust Tunneling service</a>. This allows me to create subdomains that point to my internal services without exposing my home IP address.</p>
+      <!-- New Section for Twingate VPN -->
+      <h4>Accessing Services with Twingate VPN</h4>
+      <p>To access all of my services over the internet securely, I use <a href="https://www.twingate.com/docs" target="_blank">Twingate VPN</a>. This allows me to access local resources without exposing any ports.</p>
       <p>With Zero Trust, I can define specific access controls, ensuring that only authorized users can access the web interfaces of my services. This includes a verification step before granting access, which adds an additional layer of security. By doing so, I protect my services from unauthorized access while allowing seamless connectivity for legitimate users.</p>
+
+      <!-- Cloudflare Zero Trust Tunneling -->
+      <h4>Services For Public Access</h4>
+      <p>For services that I host that integrate with the Internet, it all exposed using <a href="https://www.cloudflare.com/products/access/" target="_blank">Cloudflare ZTNA</a>.</p>
+      <p>With Zero Trust, I can "safely" expose my public services via a Cloudflare Tunnel. That way there is no exposed ports on my WAN IP, and users can access those services freely. For the most part, Cloudflare has been reliable, and downtime is very minimal and is usally on my side of infra.</p>
 
       <!-- Section for Hosting Services -->
       <h3>Hosting Services</h3>
-      <p>I have a home server based on an HP Compaq Elite 8300, running Proxmox as a Type 1 hypervisor. I have Ubuntu Server installed as a VM because it is lightweight, and all management is done through SSH and the command line.</p>
-      <p>Inside the Ubuntu Server, I installed <a href="https://casaos.zimaspace.com/" target="_blank">CasaOS</a>, which is a user-friendly platform for managing self-hosted Docker applications.</p>
+      <p>I have a home server based on an HP Elitedesk 800 G4, running Proxmox VE. I have multiple VMs and LXCs running to service my needs; Network Management, DNS, Automation, Monitoring, App Testing, the like.</p>
 
-      <!-- Subsection for Services on CasaOS -->
-      <h4>Services Hosted on CasaOS</h4>
+      <!-- Subsection for Services -->
+      <h4>Services Hosted in Proxmox VE</h4>
       <ul>
-        <li><strong>Helpdesk:</strong> I am using UVDesk for ticket management.</li>
-        <li><strong>Monitoring Service:</strong> Uptime Kuma for monitoring service uptime.</li>
-        <li><strong>AdGuard Home:</strong> A DNS sinkhole for blocking unwanted content.</li>
-        <li><strong>Nextcloud:</strong> A personal cloud solution for file storage.</li>
-        <li><strong>VaultWarden:</strong> A private password manager.</li>
-        <li><strong>Apache Guacamole:</strong> For web GUI management of all hosts.</li>
-        <li><strong>Kasm:</strong> A private browser instance.</li>
-        <li><strong>Crafty:</strong> My Minecraft server.</li>
+        <li><strong>Helpdesk:</strong> I am using Zammad for ticket management.</li>
+        <li><strong>Monitoring Service:</strong> Uptime Kuma for monitoring locally available service uptime. Gatus for monitoring externally available service uptime</li>
+        <li><strong>DNS:</strong> Technitium DNS in a 2x cluster managing all internal DNS records and advertising/malicious domains. Forwaded to an internal AD to retain internal domain access.</li>
+        <li><strong>Password Management:</strong> Vaultwarden, works with official Bitwarden applications.</li>
+        <li><strong>Remote Management:</strong> ControlR, for all my servers.</li>
+        <li><strong>Game Servers:</strong> Crafty, hosting a Minecraft server. (now migrated to my cloud server)</li>
       </ul>
 
-      <!-- Section for Crafty and Playit.gg -->
-      <h3>Crafty and Tunneling Setup</h3>
-      <p>For my Minecraft server (Crafty), I use <a href="https://playit.gg/" target="_blank">Playit.gg</a> as a tunneling service. This allows me to create a secure tunnel to my server without exposing my home IP address.</p>
-      <p>After setting up Playit.gg, I create DNS records on my domain to point the Playit.gg server address to my subdomain, ensuring that players can connect easily to my Minecraft server.</p>
+      <!-- Section for Crafty Public Access -->
+      <h3>Crafty and Public Access Setup</h3>
+      <p>For my Minecraft server (Crafty), I use standard DNS records and port forwarding to allow players to join my Minecraft Server.</p>
+      <p>This typically involves adding public DNS records that point to the server IP on the Minecraft server port. This is done through SRV records.</p>
     </section>
   </main>
 
@@ -67,4 +69,3 @@
 </body>
 
 </html>
-
